@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700&display=swap');
+:root {
+  --ei-blue: #5046e5;
+  --ei-indigo: #6610f2;
+  --ei-purple: #6f42c1;
+  --ei-pink: #d63384;
+  --ei-red: #dc3545;
+  --ei-orange: #fd7e14;
+  --ei-yellow: #ffc107;
+  --ei-green: #198754;
+  --ei-teal: #20c997;
+  --ei-cyan: #0dcaf0;
+  --ei-black: #000015;
+  --ei-white: #fff;
+  --ei-gray: #9da5b1;
+  --ei-gray-dark: #768192;
+  --ei-gray-100: #f0f4f7;
+  --ei-gray-200: #ebedef;
+  --ei-gray-300: #d8dbe0;
+  --ei-gray-400: #c4c9d0;
+  --ei-gray-500: #b1b7c1;
+  --ei-gray-600: #9da5b1;
+  --ei-gray-700: #8a93a2;
+  --ei-gray-800: #768192;
+  --ei-gray-900: #636f83;
+  --ei-primary: #5046e5;
+  --ei-secondary: #ebedef;
+  --ei-success: #51cc8a;
+  --ei-info: #747af2;
+  --ei-warning: #fc0;
+  --ei-danger: #ef376e;
+  --ei-light: #f0f4f7;
+  --ei-dark: #636f83;
+  --ei-primary-rgb: 80, 70, 229;
+  --ei-secondary-rgb: 235, 237, 239;
+  --ei-success-rgb: 81, 204, 138;
+  --ei-info-rgb: 116, 122, 242;
+  --ei-warning-rgb: 255, 204, 0;
+  --ei-danger-rgb: 239, 55, 110;
+  --ei-light-rgb: 240, 244, 247;
+  --ei-dark-rgb: 99, 111, 131;
+  --ei-white-rgb: 255, 255, 255;
+  --ei-black-rgb: 0, 0, 21;
+  --ei-body-color-rgb: 44, 56, 74;
+  --ei-body-bg-rgb: 255, 255, 255;
+  --ei-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ei-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --ei-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --ei-body-font-family: var(--ei-font-sans-serif);
+  --ei-body-font-size: 0.9375rem;
+  --ei-body-font-weight: 400;
+  --ei-body-line-height: 1.5;
+  --ei-body-color: rgba(44, 56, 74, 0.95);
+  --ei-body-bg: #fff;
+  --ei-border-width: 1px;
+  --ei-border-style: solid;
+  --ei-border-color: #ebedef;
+  --ei-border-color-translucent: rgba(0, 0, 21, 0.0875);
+  --ei-border-radius: 0.375rem;
+  --ei-border-radius-sm: 0.25rem;
+  --ei-border-radius-lg: 0.5rem;
+  --ei-border-radius-xl: 1rem;
+  --ei-border-radius-2xl: 2rem;
+  --ei-border-radius-pill: 50rem;
+  --ei-heading-color: unset;
+  --ei-link-color: #5046e5;
+  --ei-link-hover-color: #4038b7;
+  --ei-code-color: #d63384;
+  --ei-highlight-bg: #fff3cd;
+}
+body {
+  background-color: var(--ei-light);
+  font-family: 'Barlow', sans-serif;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--ei-blue);
+  padding: 10px;
+  margin-left: 250px;
+  z-index: 999;
+  height: 64px;
+}
+.header-left {
+  background-color: rgba(255, 255, 255, 0.939);
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.header-left i {
+font-size: 20px;
+margin: 5px;
+color: #636f83;
+}
+.header-left input {
+  box-shadow: none;
+  padding: 10px;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+.header-right ul li {
+  display: flex;
+}
+.header-right ul li a {
+  padding: 0 10px;
+  margin: 10px;
+}
+.header-right ul li a i {
+  font-size: 20px;
+  color: #d8d8d8;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, .02) 0 2px 5px -1px, rgba(0, 0, 0, .05) 0 1px 3px -1px;
+  max-width: 250px;
+  width: 100%;
+}
+.sidebar ul{
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+}
+.sidebar ul li {
+  display: flex;
+}
+.sidebar ul li a {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: #636f83;
+  width: 100%;
+  cursor: pointer;
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: var(--ei-blue);
+  color: white !important;
+  border-radius: 10px;
+  margin: 1px 0;
+}
+.logo {
+  background-color: var(--ei-blue);
+  height: 64px;
+  display: flex;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+.main-container {
+  margin-left: 250px;
+  padding: 20px;
+  margin: 10px 10px 10px 260px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+}
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit !important;
+  border-style: solid;
+  border-width: 0;
+}
+
+.user-circle {
+  background-color: #20c997;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+}
+.view-user-table tr,
+.view-user-table td{
+border: none;
+}
+.permissions-tb i {
+  font-size: 25px;
+  font-weight: bold;
+}
+.user-list {
+  cursor: pointer;
+}
+.add-role, .add-department {
+  position: absolute;
+  background-color: #636f835f;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.add-role .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 500px;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+.add-role .container form {
+  width: 100%;
+}
+.add-department .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 700px;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.add-department .container form {
+  width: 100%;
+}
+.role-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.settings-list ul{
+  list-style: none;
+  padding: 0;
+}
+.settings-list ul li{
+  display: flex;
+}
+.settings-list ul a{
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*Create Form */
+
+.canva:hover {
+  background-color: aliceblue;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  z-index: 99;
+}
+
+.side-menu {
+  position: fixed;
+  padding: 20px 30px;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 0 1px;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+}
+
+.elements-container {
+  /* position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 60px; */
+  padding: 0;
+  background-color: white;
+  max-width: 250px;
+}
+
+.elements-container ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.elements-container ul li {
+  padding: 10px 0;
+  box-shadow: 0 0 1px;
+}
+
+.elements-container ul li button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+
+
+.form-field {
+  box-shadow: 0 0 1px;
+  padding: 20px;
+}
+
+.container-1,
+.container-2 {
+  border: 1px dotted black;
+}
+
+.forms {
+  position: absolute;
+  top: 55px;
+  left: 170px;
+  right: 10px;
+}
+
+.form-item {
+  position: absolute;
+  top: 50px;
+  left: 170px;
+  right: 10px;
+}
+
+.i-btn {
+  display: none !important;
+}
+
+.i-item:hover .i-btn {
+  display: flex !important;
+}
+
+.edit-section {
+  position: absolute;
+  right: 0;
+  left: 25%;
+}
+.set-form-name {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  top: 20%;
+  left: 40%;
+  box-shadow: 0 0 5px rgba(0, 0, 21, 0.2);
+}
+.edit-elements {
+  position: absolute;
+    background-color: white;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    top: 20%;
+    left: 40%;
+    box-shadow: 0 0 5px rgba(0, 0, 21, 0.2);
+}
+.double-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: flex-end;
+}
+.triple-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: flex-end;
+}
+.double-section .heading-ele {
+  grid-column: 1 / span 2;
+}
+.triple-section .heading-ele {
+  grid-column: 1 / span 3;
+}
+/*Create Form End*/
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login form {
+  max-width: 400px;
+  width: 100%;
+}
+.profile {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 5px 5px;
+  top: 60px;
+  right: 10px;
+  width: 180px;
+  box-shadow: 0 0 5px rgba(0, 0, 21, 0.2);
+  padding: 10px 0;
+}
+
+.profile ul li a {
+  text-decoration: none;
+  color: #636f83;
+  width: 100%;
+  margin:  0;
+ 
+}
+.profile ul li a:hover{
+  background-color: #636f832a;
+}
+.message {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 7px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #20c997;
+  transition: all ease-in;
+}
+.border-line-i {
+  border-left: 3px solid #5046e5;
+}
+.border-line-ii {
+  border-left: 3px solid #dc3545;
+}
+.border-line-iii {
+  border-left: 3px solid #ffc107;
+}
+.border-line-iv {
+  border-left: 3px solid #51cc8a;
+}
