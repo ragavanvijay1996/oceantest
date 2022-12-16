@@ -1,15 +1,8 @@
 import React, {useState} from "react"
 import { Link } from "react-router-dom"
 
-export const Sidebar = ({departments, permittedRole}) =>{
-    const [showMenu, setShowMenu] = useState(false)
-    const [showMenuId, setShowMenuId] = useState('')
-   
-    const handleMenu = (e, _id) => {
-      e.preventDefault()
-        setShowMenuId(_id)
-        setShowMenu(!showMenu)
-    }
+export const Sidebar = () =>{
+  
    
     return(
         <div className="sidebar">
